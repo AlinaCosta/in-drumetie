@@ -1,0 +1,99 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.6;
+  color: $color-grey-dark-3;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6.5rem;
+    font-weight: 600;
+    letter-spacing: 3rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4.9rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-header-light,
+    $color-header-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  //transition: all .2s;
+
+  &-ghid {
+    color: $color-white;
+    text-shadow: 1px 2px rgba($color: #000000, $alpha: 0.1);
+  }
+  &-popup {
+    font-size: 2.5rem;
+  }
+  &-story {
+    // color: $color-white;
+    //text-shadow: 0 .4rem .4rem rgba($color-black, .4);
+  }
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  // &:hover{
+  //     transform: skewY(2deg) skewX(15deg)  scale(1.1);
+  //     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  // }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+  }
+}
+.legend {
+  font-size: $small-font-size;
+  margin-bottom: 1rem;
+}
